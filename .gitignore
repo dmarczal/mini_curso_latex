@@ -1,0 +1,12 @@
+db/schema.rb
+tmp/*
+log/*
+.DS_Store
+*.sqlite3
+*~
+.\#*
+\#**\#
+.*.sw[op]
+.sw[op]
+resetDb.sh
+apresentação.pdf

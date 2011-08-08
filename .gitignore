@@ -8,5 +8,6 @@ log/*
 \#**\#
 .*.sw[op]
 .sw[op]
+*.properties.xml
 resetDb.sh
 apresentação.pdf

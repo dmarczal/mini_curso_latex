@@ -1,0 +1,216 @@
+\section{Estrutura}
+\subsection{Estruturando um frame}
+%------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Estruturando um frame}
+
+  Beamer oferece diversas formas de estruturar um frame, dentre elas veremos:
+
+  \begin{itemize}
+     \item Columns
+     \item Blocks
+     %\item Boxes (Borders)
+  \end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Colunas}
+
+  \begin{block}<1->{Código para uma coluna de um Coluna}
+    \begin{minted}[fontsize=\scriptsize]{tex}
+        \begin{columns}
+          \column[.x\textwidth]
+          ...
+          \column[.x\textwidth]
+          ...
+          \column[.x\textwidth]
+          ...
+        \end{columns}
+    \end{minted}
+  \end{block}
+
+  \begin{block}<2->{}
+    \begin{itemize}
+       \item O beamer dispõe de um ambiente muito útil para dividir o
+            slide, ou partes dele, em múltiplas colunas. \textcolor{red}{ $\backslash$ begin\{columns\}}
+       \item Ele funciona como o ambiente itemize, para começar uma nova coluna usa-se o comando
+             \textcolor{red} { $\backslash$ column[largura]}
+       \item Onde \textcolor{red}{x} é a porcentagem da largura do slide.
+    \end{itemize}
+
+  \end{block}
+
+\end{frame}
+
+%------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Exemplo:}
+
+  \begin{minted}[fontsize=\scriptsize]{tex}
+    \begin{columns}
+      \column{.3\textwidth}
+        Coluna 1
+      \column{.3\textwidth}
+        Coluna 2
+    \end{columns}
+  \end{minted}
+
+  \begin{block}{Resultado}
+    \begin{center}
+     \begin{columns}
+       \column{.3\textwidth}
+         Coluna 1
+      \column{.3\textwidth}
+        Coluna 2
+    \end{columns}
+    \end{center}
+  \end{block}
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Colunas}
+
+  \begin{block}{Código para uma coluna de um Coluna}
+    \begin{minted}[fontsize=\scriptsize]{tex}
+        \begin{columns}
+          \column[.x\textwidth]
+          ...
+          \column[.x\textwidth]
+          ...
+          \column[.x\textwidth]
+          ...
+        \end{columns}
+    \end{minted}
+  \end{block}
+
+  \begin{block}{}
+    \begin{itemize}
+       \item O beamer dispõe de um ambiente muito útil para dividir o
+            slide, ou partes dele, em múltiplas colunas.  \textcolor{red}{ $\backslash$begin\{columns\}}
+       \item Ele funciona como o ambiente itemize, para começar uma nova coluna usa-se o comando
+             \textcolor{red} { $\backslash$column[largura]}
+       \item Onde \textcolor{red}{x} é a porcentagem da largura do slide.
+    \end{itemize}
+
+  \end{block}
+
+\end{frame}
+
+%------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Exemplo:}
+
+  \begin{minted}[fontsize=\scriptsize]{tex}
+    \begin{columns}
+      \column{.3\textwidth}
+        Coluna 1
+      \column{.3\textwidth}
+        Coluna 2
+    \end{columns}
+  \end{minted}
+
+  \begin{block}{Resultado}
+    \begin{center}
+     \begin{columns}
+       \column{.3\textwidth}
+         Coluna 1
+      \column{.3\textwidth}
+        Coluna 2
+    \end{columns}
+    \end{center}
+  \end{block}
+\end{frame}
+
+%------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Blocos}
+
+  \begin{minted}[fontsize=\scriptsize]{tex}
+    \begin{block}{Latex com Beamer}
+      Apresentando o Beamer....
+    \end{block}
+  \end{minted}
+
+   \begin{block}{Latex com Beamer}
+      Apresentando o Beamer....
+   \end{block}
+
+\end{frame}
+
+%------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Blocos em duas colunas}
+
+  \begin{minted}[fontsize=\scriptsize]{tex}
+
+    \begin{columns}
+      \begin{column}[l]{5cm}
+         \begin{block}{Latex com Beamer}
+            Apresentando o Beamer.... 1
+         \end{block}
+      \end{column}
+
+      \begin{column}[r]{5cm}
+         \begin{block}{Latex com Beamer}
+            Apresentando o Beamer.... 2
+         \end{block}
+      \end{column}
+    \end{columns}
+  \end{minted}
+
+  \begin{columns}
+    \begin{column}[l]{5cm}
+       \begin{block}{Latex com Beamer}
+          Apresentando o Beamer.... 1
+       \end{block}
+    \end{column}
+
+    \begin{column}[r]{5cm}
+       \begin{block}{Latex com Beamer}
+          Apresentando o Beamer.... 2
+       \end{block}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------%
+
+%\begin{frame}[fragile]
+%  \frametitle{Caixa de textos}
+%
+%  \begin{block}{Caixas de textos}
+%
+%    Para usar as caixas de textos é necessário incluir o pacote \textbf{fancybox} através do comando:
+%    $\backslash$usepackage\{fancybox\}
+%
+%    \begin{columns}
+%      \begin{column}[l]{5cm}
+%        \begin{minted}[fontsize=\scriptsize]{tex}
+%          \shadowbox{Shadow Box}
+%          \fbox{fbox}
+%          \doublebox{Double Box}
+%          \ovalbox{oval Box}
+%          \Ovalbox{Oval Box}
+%        \end{minted}
+%      \end{column}
+%
+%      \begin{column}[r]{5cm}
+%          \shadowbox{Shadow Box}
+%          \fbox{fbox}
+%          \doublebox{Double Box}
+%          \ovalbox{oval Box}
+%          \Ovalbox{Oval Box}
+%      \end{column}
+%
+%    \end{columns}
+%  \end{block}
+%\end{frame}
+

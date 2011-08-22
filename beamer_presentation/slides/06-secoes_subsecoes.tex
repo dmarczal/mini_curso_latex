@@ -1,0 +1,41 @@
+\section{Seções}
+\subsection{Particionando sua apresentação}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \begin{itemize}[<+->]
+     \item Apresentações são divididas em seções, subseções, e sub-subseções.
+     \item Para dividir sua apresentação utilize as instruções:
+          \begin{minted}[fontsize=\scriptsize]{tex}
+              \section{Titulo},
+              \subsection{Titulo}
+              \subsubsection{Titulo}
+          \end{minted}
+    \item \textcolor{red}{$\backslash$section\{...\}}
+          \begin{itemize}
+             \item Insere um novo tópico no sumário.
+             \item Insere um novo \textit{link} na barra de menu.
+             \item E não cria um cabeçalho no frame.
+          \end{itemize}
+
+     \item Outra versão:
+          \begin{minted}[fontsize=\scriptsize]{tex}
+            \subsection*{ ... }
+          \end{minted}
+          Apenas adiciona uma \textit{link} na barra de navegação, mas não no sumário.
+   \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Exemplo}
+
+  \inputminted[fontsize=\scriptsize]{tex}{codes/05-secoes.tex}
+
+  Seções são sempre declaradas entre os frames!!!
+
+\end{frame}
+
+

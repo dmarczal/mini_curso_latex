@@ -1,0 +1,96 @@
+\documentclass[11pt,compress,xcolor=table]{beamer}
+
+\usepackage[portuges]{babel}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb,amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{bold-extra}
+% pacote para colorir tabelas
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[table]{xcolor}
+%Colorir arquivos fontes
+\usepackage{minted}
+%caixas de textos
+%\usepackage{fancybox}
+
+%===== Pacotes para colorir links =====
+\usepackage{fancyhdr}
+%\usepackage[colorlinks,linkcolor=blue,hyperindex]{hyperref}
+%\hypersetup{backref,  pdfpagemode=FullScreen, colorlinks=true,linkcolor=blue}
+
+%===== Pacotes para mostrar códigos fontes =====
+\usepackage{listings}
+% simpsons
+%\usepackage{simpsons}
+
+% Caminhos das Imagens
+\graphicspath{{images/}}
+
+%cores
+\definecolor{lightblue}{RGB}{0,159,253}
+
+%comandos
+\newcommand{\degree}{\ensuremath{^\circ}}
+\makeatletter
+  \newcommand\tinyv{\@setfontsize\tinyv{6pt}{6pt}}
+\makeatother
+
+%===== Configurações para mostrar Códigos Fonte ===== %
+\lstset{numbers=left,
+  language=python,
+  stepnumber=1,
+  firstnumber=1,
+  numberstyle=\tiny,
+  extendedchars=false,
+  escapeinside='',
+  breaklines=true,
+  frame=tb,
+  basicstyle=\tiny,
+  stringstyle=\ttfamily,
+  showstringspaces=false
+  backgroundcolor=\icolor{gray}
+  morecomment=[l]{//} % displays comments in italics (language dependent)
+}
+
+\author[Marczal, Kulk]{Diego Marczal \\ Josiel Neumann Kuk}
+\title[Introdução ao Latex]{ Criando apresentações com o Beamer }
+\subtitle[Apresentações]{{\scriptsize Porque formatações são chatas!!}}
+\institute[UNICENTRO]{Universidade Estadual do Centro-Oeste}
+\date[18/08/2011]{18 de agosto de 2011}
+
+\logo{\includegraphics[width=.5cm]{logo.jpeg}}
+
+\usetheme{Ilmenau}
+\setbeamercovered{transparent}
+\setbeamertemplate{footline}[frame number]
+
+\begin{document}
+
+
+\input{slides/01-capa}
+\input{slides/02-sumario}
+\input{slides/03-intro}
+\input{slides/04-templates}
+\input{slides/05-frames}
+\input{slides/06-secoes_subsecoes}
+\input{slides/07-text}
+\input{slides/08-align_spacing}
+\input{slides/09-listings}
+\input{slides/10-overlays}
+\input{slides/11-tabelas}
+\input{slides/12-estructing_frame}
+\input{slides/13-figuras}
+\input{slides/14-themas}
+\input{slides/15-transicoes}
+\input{slides/16-thanks.tex}
+
+\end{document}
+
+

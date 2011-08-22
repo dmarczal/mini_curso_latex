@@ -1,0 +1,88 @@
+\section{Posições}
+\subsection{Alinhamento e Espaçamento}
+%-----------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Alinhamento}
+
+  Um frame pode ser alinhado a \textbf{esquerda}, \textbf{direita} ou \textbf{centro} com os
+  seguintes comandos
+  \begin{itemize}
+     \item \mint{tex}|\flushleft{Texto}|
+     \item \mint{tex}|\flushright{Texto}|
+     \item \mint{tex}|\center{Texto}|
+  \end{itemize}
+
+  \begin{block}{Exemplo:}
+    \begin{columns}
+      \begin{column}[l]{5cm}
+        \begin{minted}[fontsize=\scriptsize,resetmargins=true]{tex}
+          \begin{center}
+            Texto Centralizado
+          \end{center}
+        \end{minted}
+      \end{column}
+
+      \begin{column}[r]{5cm}
+          \begin{center}
+            Texto Centralizado
+          \end{center}
+      \end{column}
+    \end{columns}
+  \end{block}
+
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}[fragile]
+
+  \begin{block}<1->{Código para alinhar a esquerda}
+    \mint{tex}| \flushleft{A esquerda} |
+  \end{block}
+
+  \begin{block}<2->{Resultado:}
+     \flushleft{A esquerda}
+   \end{block}
+
+  \begin{block}<3->{Código para alinhar a direita}
+    \mint{tex}| \flushright{A direita} |
+  \end{block}
+
+  \begin{block}<4->{Resultado:}
+     \flushright{A Direita}
+  \end{block}
+
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Espaçamento}
+
+  \begin{itemize}[<+->]
+     \item O espaço vertical é indicado usando o comando \textcolor{green}{$\backslash$vskip<number>pt}. \\
+           Por exemplo: \textcolor{green}{$\backslash$vskip15pt} irá produzir 15 pontos de espaço na vertical.
+     \item O mesmo acontece para o espaço horizontal:
+           Por exemplo: \textcolor{green}{$\backslash$hskip15pt}| irá produzir 15 pontos de espaço na horizontal.
+     \item Espaços horizontais são úteis para indentar textos ou gráficos.
+     \item Também é possível usar medidas em \textbf{cm}. \\
+           Exemplo: \textcolor{green}{$\backslash$vskip15cm}
+     \item Valores negativos também sào permitidos.\\
+           Exemplo: \textcolor{green}{$\backslash$vskip-10pt ou $\backslash$hskip-1cm}
+  \end{itemize}
+
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Espaçamento}
+  Ainda temos os comandos:
+  \begin{itemize}[<+->]
+     \item \textbf{$\backslash$vspace\{<numero>pt\}}
+     \item \textbf{$\backslash$hspace\{<numero>pt\}}
+     \item Também podem ser usados em \textbf{cm}
+  \end{itemize}
+
+\end{frame}
+

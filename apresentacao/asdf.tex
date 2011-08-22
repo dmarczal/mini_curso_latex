@@ -1,0 +1,77 @@
+\documentclass[12pt]{beamer}
+
+\usepackage[portuges]{babel}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{verbatim}
+
+\usepackage{bold-extra}
+\usepackage{minted}
+\setbeamertemplate{footline}[frame number]
+
+%===== Pacotes para colorir links =====
+\usepackage{fancyhdr}
+%\usepackage[colorlinks,linkcolor=blue,hyperindex]{hyperref}
+%\hypersetup{backref,  pdfpagemode=FullScreen, colorlinks=true,linkcolor=blue}
+
+%===== Pacotes para mostrar códigos fontes =====
+\usepackage{listings}
+
+% Caminhos das Imagens
+\graphicspath{{images/}}
+
+%===== Configurações para mostrar Códigos Fonte ===== %
+\lstset{numbers=left,
+  language=python,
+  stepnumber=1,
+  firstnumber=1,
+  numberstyle=\tiny,
+  extendedchars=false,
+  escapeinside='',
+  breaklines=true,
+  frame=tb,
+  basicstyle=\tiny,
+  stringstyle=\ttfamily,
+  showstringspaces=false
+  backgroundcolor=\icolor{gray}
+  morecomment=[l]{//} % displays comments in italics (language dependent)
+}
+
+\author[Marczal]{Diego Marczal\\Josiel Neumann Kuk}
+\title{Introdu{\c c}\~ao ao \LaTeX}
+\institute{IV Jornada de Atualiza{\c c}\~ao em Inform\'atica \\ Minicurso de \LaTeX}
+\date{2011}
+
+%\mode<beamer>{ \usetheme{Frankfurt} } %Ilmenau
+ \usetheme{Frankfurt}
+\begin{document}
+
+%\input{slides/capa}
+%\input{slides/02-sumario}
+%\input{slides/historico}
+%\input{slides/introducao}
+%\input{slides/basico}
+%\input{slides/funcionamento}
+%\input{slides/texto}
+%\input{slides/matematica}
+\input{slides/bibliografia}
+%\input{slides/referencias}
+
+
+\begin{frame}[allowframebreaks]{Bibliography}
+\bibliographystyle{plain}
+\bibliography{apresentacao}
+\end{frame}
+%\bibliography{apresentacao}
+%\bibliographystyle{plain}
+
+
+\end{document}
+
+
+

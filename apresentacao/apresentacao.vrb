@@ -1,0 +1,10 @@
+\frametitle {BiB\TeX : Exemplo}\par \verb|@Book{livropca,| \newline
+\verb|author = {Ian T. Jolliffe},| \newline
+\verb|publisher = {Springer-Verlag},| \newline
+\verb|title = {Principal Component Analysis},| \newline
+\verb|year = {2002},| \newline
+\verb|note = {ISBN 0387954422}| \newline
+\verb|}| \newline
+
+\cite{latex_wikibooks}
+

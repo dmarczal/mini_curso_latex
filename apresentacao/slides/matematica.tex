@@ -1,0 +1,136 @@
+\section{Elementos Matem\'aticos}
+\subsection{Elementos b\'asicos}
+
+\begin{frame}[fragile]{Elementos b\'asicos}
+\begin{itemize}
+\item Utiliza-se \verb|$...$| para produzir f\'ormulas dentro de um par\'agrafo;
+\item Utiliza-se \verb|\[...]| para produzir equa{\c c}\~oes destacadas do par\'agrafo;
+\item Utiliza-se \verb|\begin{equation}...\end{equation}| para poder referenciar a equa{\c c}\~ao usando \verb|\ref{}|.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Exemplos}
+
+\verb|A Equação \ref{eqn:exemplo} é apresentada abaixo:|\newline
+\verb|\newline| \newline
+\verb|\begin{equation}\label{eqn:exemplo}|\newline
+\verb|2x^2-3x+1=0|\newline
+\verb|\end{equation}|\newline
+
+Isso produz:\newline
+
+A Equação \ref{eqn:exemplo} é apresentada abaixo: \newline
+\begin{equation}\label{eqn:exemplo}
+2x^2-3x+1=0
+\end{equation}
+\end{frame}
+
+
+\begin{frame}[fragile]{Exemplos}
+
+\verb|A Equação \ref{eqn:exemplo2} é apresentada abaixo:|\newline
+\verb|\newline| \newline
+\verb|\begin{equation}\label{eqn:exemplo2}|\newline
+\verb|\frac{-b\pm\sqrt{b^2-4ac}}{2a}|\newline
+\verb|\end{equation}|\newline
+
+Isso produz:\newline
+
+A Equação \ref{eqn:exemplo2} é apresentada abaixo: \newline
+\begin{equation}\label{eqn:exemplo2}
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{equation}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Exemplos}
+\begin{itemize}
+\item \verb|$\sqrt[3]{8}=2$| produz $\sqrt[3]{8}=2$.
+\item \verb|$a_n, x_i^2, x^{2n}$| produz $a_n, x_i^2, x^{2n}$.
+\item \verb|$\int\limits_a^b f(x)dx$| produz $\int\limits_a^b f(x)dx$.
+\item \verb|$\sum_{i=1}^n a_i$| produz $\sum_{i=1}^n a_i$.
+\item \verb|$\sum\limits_{i=1}^n a_i$| produz $\sum\limits_{i=1}^n a_i$.
+\item \verb|${n+1\choose k}={n\choose k}+{n\choose k-1}$| produz ${n+1\choose k}={n\choose k}+{n\choose k-1}$.
+\end{itemize} 
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Fun{\c c}\~oes Matem\'aticas}
+
+Algumas das fun{\c c}\~oes pr\'e-definidas:
+\newline \newline
+\verb|\arccos \arcsin \arctan \arg \cos|
+\verb|\cosh \cot \coth \csc \deg \det|
+\verb|\dim \exp \gcd \hom \inf \ker \lg|
+\verb|\lim \liminf \limsup \ln \log \max|
+\verb|\min \Pr \sec \sin \sinh \sup \tan \tanh|
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Matrizes}
+Permite descrever tabelas e matrizes. Exemplo:
+\begin{verbatim}
+\begin{array}{clcr}
+a+b+c & uv     & x-y & 27 \\
+a+b   & u+v    & z   & 134 \\
+a     & 3u+vw  & xyz & 2.978 \\ 
+\end{array}
+\end{verbatim}
+
+Produz:
+
+$\begin{array}{clcr}
+$a+b+c$ & uv     & $x-y$ & 27 \\
+$a+b$   & $u+v$    & z   & 134 \\
+a     & $3u+vw$  & xyz & 2.978 \\
+
+\end{array}$
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Matrizes}
+Matrizes podem ser obtidas usando-se delimitadores – \{, $[$, $($. Para indicar se o delimitador \'e o esquerdo ou o direito, deve-se anteceder o delimitador por \verb|\left| ou \verb|\right|. Exemplo:
+
+\verb|\[ \left [| \newline
+\verb|\begin{array}{clcr}| \newline
+\verb|$a+b+c$ & uv     & $x-y$ & 27 \\| \newline
+\verb|$a+b$   & $u+v$    & z   & 134 \\| \newline
+\verb|a     & $3u+vw$  & xyz & 2.978 \\| \newline
+\verb|\end{array}| \newline
+\verb|\right ] \]| \newline
+
+\[ \left [|
+\begin{array}{clcr}
+$a+b+c$ & uv     & $x-y$ & 27 \\
+$a+b$   & $u+v$    & z   & 134 \\
+a     & $3u+vw$  & xyz & 2.978 \\
+\end{array}
+\right ] \]
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Exemplo}
+
+\verb|\[ \left (| \newline
+\verb|\begin{array}{ccc}| \newline
+\verb|a_{11} & \cdots & a_{1n} \\| \newline
+\verb|\vdots & \ddots & \vdots \\ | \newline
+\verb|a_{m1} & \cdots & a_{mn}| \newline
+\verb|\end{array}| \newline
+\verb|\right ) \] | \newline
+
+\[ \left (
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn}
+\end{array} \right ) \]
+
+
+\end{frame}

@@ -1,0 +1,59 @@
+\section{Funcionamento}
+\subsection{Exemplos b\'asicos}
+
+\begin{frame}[fragile]{Exemplo b\'asico}
+\verb| % Este é um pequeno arquivo fonte para o LaTeX| \\
+\verb| % O símbolo "%" indica um comentário e é ignorado| \\ 
+\verb| \documentclass[10pt]{article}| \\
+\verb| \usepackage[latin1]{inputenc}| \\
+\verb| \usepackage[brazil]{babel}| \\
+\verb| \usepackage{graphicx}| \\
+\verb| \begin{document}| \\
+\verb| Meu primeiro texto| \\
+\verb| \section{Minha primeira seção}| \\
+\verb| \end{document}|
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Sem reinventar a roda: pacotes}
+O \LaTeX fornece muitos recursos pr\'e-instalados, por meio de pacotes. Esses pacotes fornecem uma variedade enorme de recursos configurados, havendo a necessidade apenas de conhecer suas caracter\'isticas (forma correta de utiliza{\c c}\~ao).
+\newline
+\newline
+Mas como verificar a documenta{\c c}\~ao de um pacote? No linux, apenas digitar no terminal "texdoc nome-do-pacote".
+\newline
+\newline
+Nas nossas refer\^encias est\~ao links para alguns dos muitos pacotes, dentre os mais utilizados.
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Mudando o tamanho da fonte}
+Pode-se alterar facilmente o tamanho da fonte utilizada nos textos. O formato padr\~ao do comando \'e \verb|\fonte{texto}|. Exemplos de formatos de fontes:\\
+\begin{description}
+\item[tiny]: \tiny{texto em tiny};
+\item[scriptsize]: \scriptsize{texto em scriptsize};
+\item[footnotesize]: \footnotesize{texto em footnotesize}; 
+\item[small]: \small{texto em small};
+\item[normalsize]: \normalsize{texto em normalsize};
+\item[Large]: \Large{texto em Large};
+\item[huge]: \huge{texto em huge}.
+\end{description}
+\end{frame}
+
+
+\begin{frame}[fragile]{Definindo divis\~oes no texto}
+Divis\~oes pr\'e-definidas em \LaTeX:\\
+\verb|\part| \\
+\verb|\chapter| \\
+\verb|\section| \\
+\verb|\subsection|\\
+\verb|\subsubsection|\\
+\verb|\paragraph| \\
+\verb|\subparagraph|\\
+
+\begin{itemize}
+\item O estilo \textit{article} n\~ao permite o comando \verb|\chapter|;
+\item A numera{\c c}\~ao de cap\'itulos/se{\c c}\~oes/subse{\c c}\~oes \'e gerada automaticamente pelo \LaTeX.
+\end{itemize}
+\end{frame}

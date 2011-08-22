@@ -1,0 +1,217 @@
+\section{Texto}
+\subsection{Formatos}
+
+\begin{frame}[fragile]{Caracteres especiais e acentua{\c c}\~ao}
+\begin{itemize}
+\item Os caracteres especiais \verb| $ & % # { }| podem ser obtidos pelos comandos \verb|\$ \& \% \# \{ \}|, respectivamente;
+\item Acentua{\c c}\~ao pode ser obtida da seguinte maneira: \verb|\^o| produz \^o; \verb|\'e| produz \'e; \verb|\~a| produz \~a, etc;
+\item O pacote \texttt{inputec} faz a convers\~ao autom\'atica dos acentos.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Hifena{\c c}\~ao}
+A hifena{\c c}\~ao pode ser feita de duas formas:
+\begin{enumerate}
+\item por comando: \verb|\hyphenation{PYTHON com-pu-ta-dor}| (usado no pre\^ambulo);
+\item no corpo do texto: \verb|com\-pu\-ta\-ção|.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]{Mudando o texto}
+\begin{itemize}
+\item \verb|\textbf{negrito}| gera \textbf{negrito};
+\item \verb|\texttt{Text}| gera \texttt{datilografado};
+\item \verb|\textit{italico}| gera \textit{italico};
+\item \verb|\textsc{Sans Serif}| gera \textsc{Sans Serif};
+\item \verb|\emph{\Ênfase}| gera \emph{\^Enfase}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Alinhamento}
+Ambientes \emph{center}, \emph{flushleft} e \emph{flushright}:\\
+
+\center{\verb|\center{centralizado}|}
+
+\begin{flushleft}
+\verb|\begin{flushleft}|\\
+\verb|Esquerda|\\
+\verb|\end{flushleft}|\\
+\end{flushleft}
+
+\begin{flushright}
+\verb|\begin{flushright}|\\
+\verb|Direita|\\
+\verb|\end{flushright}|\\
+\end{flushright}
+\end{frame}
+
+
+\begin{frame}[fragile]{Notas de rodap\'e}
+As notas de rodap\'e s\~ao geradas pelo comando \verb|\footnote{texto}|. Exemplo:
+\\
+\verb|Unicentro\footnote{www.unicentro.br},| \\
+\verb|Guairacá\footnote{www.faculdadeguairaca.com.br}|\\
+\verb| e UTFPR\footnote{www.utfpr.edu.br}.|
+\newline \newline
+Produz a sa\'ida:
+\newline \newline
+Unicentro\footnote{www.unicentro.br}, Guairac\'a\footnote{www.faculdadeguairaca.com.br} e UTFPR\footnote{www.utfpr.edu.br}
+\end{frame}
+
+\begin{frame}[fragile]{Gerando t\'itulos de trabalhos}
+\begin{itemize}
+\item Declara-se:\\
+\verb|\title{Meu título}|\\
+\verb|\author{Meu nome}|\\
+\verb|\date{Minha data} ou \date{}|
+\item Omitindo-se o comando \verb|\date|, a data corrente da m\'aquina \'e utilizada;
+\item Para gerar o todo t\'itulo no documento: \\
+\verb|\maketitle|
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Gerando t\'itulos de trabalhos - exemplo}
+$\backslash$title\{Introdução ao \LaTeX\} \newline
+\verb|\author{Diego Marczal e Josiel Kuk}|\newline
+\verb|\date{17 de agosto de 2011}|
+\end{frame}
+
+\begin{frame}[fragile]{Listas com marcadores, numera{\c c}\~ao e descri{\c c}\~ao}
+Para produzir lista com uso de marcadores, utiliza-se: \newline
+\verb|\begin{itemize}|\newline
+\verb|\item Primeiro item| \newline
+\verb|\item Segundo item| \newline
+\verb|\item Terceiro item| \newline
+\verb|\end{itemize}|
+\newline \newline
+Produz:
+\begin{itemize}
+\item Primeiro item
+\item Segundo item 
+\item Terceiro item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Listas com marcadores, numera{\c c}\~ao e descri{\c c}\~ao}
+Para produzir lista com uso de numera{\c c}\~ao, utiliza-se: \newline
+\verb|\begin{enumerate}|\newline
+\verb|\item Primeiro item| \newline
+\verb|\item Segundo item| \newline
+\verb|\item Terceiro item| \newline
+\verb|\end{enumerate}|
+\newline \newline
+Produz:
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item 
+\item Terceiro item
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]{Listas com marcadores, numera{\c c}\~ao e descri{\c c}\~ao}
+Para produzir lista com uso de descri{\c c}\~ao, utiliza-se: \newline
+\verb|\begin{description}|\newline
+\verb|\item[Um] Primeiro item| \newline
+\verb|\item[Dois] Segundo item| \newline
+\verb|\item[Tres] Terceiro item| \newline
+\verb|\end{description}|
+\newline \newline
+Produz:
+\begin{description}
+\item[Um] Primeiro item
+\item[Dois] Segundo item
+\item[Tres] Terceiro item
+\end{description}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Listas com marcadores, numera{\c c}\~ao e descri{\c c}\~ao}
+\'E poss\'ivel utilizar listas aninhadas, mesclando os tipos: \newline
+\verb|\begin{itemize}|\newline
+\verb|\item Primeiro item| \newline
+\verb|\item Segundo item| \newline
+\verb|\begin{enumerate}| \newline
+\verb|\item Sub-item| \newline
+\verb|\end{enumerate}| \newline
+\verb|\item Terceiro item| \newline
+\verb|\end{itemize}| \newline
+Produz:
+\begin{itemize}
+\item Primeiro item 
+\item Segundo item
+\begin{enumerate}
+\item Sub-item
+\end{enumerate}
+\item Terceiro item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Figuras e tabelas}
+Figuras e tabelas s\~ao \emph{corpos flutuantes}, obtidos utilizando-se os ambientes \emph{figure} e \emph{table}:\newline
+
+\verb|\begin{figure}[parâmetros]| \newline
+\verb|...|\newline
+\verb|\caption{texto(legenda)}| \newline
+\verb|\end{figure}| \newline
+e \newline
+\verb|\begin{table}[parâmetros]| \newline
+\verb|...|\newline
+\verb|\caption{texto(legenda)}| \newline
+\verb|\end{table}| \newline
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Figuras e tabelas: par\^ametros}
+\'E poss\'ivel especificar um ou mais par\^ametros, mas n\~ao h\'a garantia que ser\~ao seguidos:\newline
+\begin{description}
+\item[h] tenta posicionar o objeto na posi{\c c}\~ao em que est\'a no texto (\textbf{h}ere);
+\item[t] tenta posicionar o objeto no topo da p\'agina (\textbf{t}op);
+\item[b] tenta posicionar o objeto na parte inferior da p\'agina (\textbf{b}ottom);
+\item[p] tenta posicionar o objeto em p\'agina especial;
+\item[!] for{\c c}a o posicionamento;
+\item[H] posiciona aqui ou nada feito.
+\end{description}
+\end{frame}
+
+\begin{frame}[fragile]{Figuras e tabelas: exemplos}
+Exemplo de tabela: \newline
+
+\begin{table}[!ht]
+\centering
+\caption{Minha tabela.}
+\begin{tabular}{|l|r|}     \hline
+\emph{Foo}  &  \emph{Bar} \\ \hline
+1000        &  2000       \\ \hline
+4000        &  5000       \\ \hline
+7000        &  8000       \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Figuras e tabelas: exemplos}
+Exemplo de figura: \newline
+\begin{center}
+	\includegraphics[scale=1.00]{jai.jpg}
+	\captionof{figure}{IV Jornada.}
+	\label{fig:jai}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Refer\^encias cruzadas: \emph{labels}}
+O comando \verb|\label{nome referencia}| coloca uma marca naquele ponto do texto (normalmente em se{\c c}\~oes, figuras, tabelas, etc), e pode ser utilizado para se referir a ele em outra parte do texto, com o comando \verb|\ref{nome referencia}|.
+\newline \newline
+Exemplo: para nos referirmos a imagem do slide anterior, precisamos para referciar o seu \emph{label}, com o comando \verb|\ref{fig:jai}|. Com isso, a figura do slide anterior pode ser acessada na Figura \ref{fig:jai}.
+\newline \newline
+O n\'umero da p\'agina do ponto onde o  foi colocada pode ser impresso com o comando
+\verb|\pageref{nome referencia}|. A a p\'agina da figura anterior \'e a \pageref{fig:jai}.
+\end{frame}

@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.07pt}
+\select@language {portuges}
+\beamer@sectionintoc {1}{Hist\'orico}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{O que \'e \textlatin {\LaTeX }?}{3}{0}{1}
+\beamer@sectionintoc {2}{Instala{\c c}\~ao}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Instala{\c c}\~ao em Windows e Linux}{7}{0}{2}
+\beamer@sectionintoc {3}{Conceitos B\'asicos}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Estrutura B\'asica}{8}{0}{3}
+\beamer@sectionintoc {4}{Funcionamento}{13}{0}{4}
+\beamer@subsectionintoc {4}{1}{Exemplos b\'asicos}{13}{0}{4}
+\beamer@sectionintoc {5}{Texto}{17}{0}{5}
+\beamer@subsectionintoc {5}{1}{Formatos}{17}{0}{5}
+\beamer@sectionintoc {6}{Elementos Matem\'aticos}{33}{0}{6}
+\beamer@subsectionintoc {6}{1}{Elementos b\'asicos}{33}{0}{6}
+\beamer@sectionintoc {7}{Refer\^encias Bibliogr\'aficas}{41}{0}{7}
+\beamer@subsectionintoc {7}{1}{Elementos b\'asicos}{41}{0}{7}
+\beamer@subsectionintoc {7}{2}{BiB\textlatin {T\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }}{42}{0}{7}
+\beamer@sectionintoc {8}{Refer\^encias}{44}{0}{8}

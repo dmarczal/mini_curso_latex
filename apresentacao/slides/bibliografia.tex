@@ -1,0 +1,43 @@
+\section{Refer\^encias Bibliogr\'aficas}
+\subsection{Elementos b\'asicos}
+
+\begin{frame}[fragile]{Elementos b\'asicos}
+\begin{itemize}
+\item BiB\TeX \'e um programa externo que permite definir refer\^encias bibliogr\'aficas;
+\item Usa uma rela{\c c}\~ao de refer\^encias definidas em um arquivo \texttt{.bib};
+\item S\~ao importadas somente as refer\^encias indicadas pelos comandos \verb|\cite| e \verb|\nocite|;
+\item O programa \texttt{bibtex} l\^e o arquivo \texttt{.aux} gerado pelo \LaTeX;
+\item O comando \verb|\bibliography{nome}| informa que a bibliografia encontra-se no arquivo \texttt{nome.bib};
+\item O comando \verb|\bibliographystyle{...}| define o estilo da bibliografia a ser produzida (existem v\'arios estilos).
+\end{itemize}
+\end{frame}
+
+\subsection{BiB\TeX}
+
+\begin{frame}[fragile]{BiB\TeX}
+Estrutura do arquivo .bib: cont\'em uma sequ\^encia de entradas, sendo cada entrada definida como:\newline
+\newline 
+\verb|@tipo{rótulo, chave={valor}, chave={valor},...}|
+\newline \newline
+Tipos de entradas mais comuns:
+\newline
+\begin{description}
+\item[book] livro;
+\item[inproceedings] artigo em anais de evento;
+\item[article] artigo em peri\'odico.
+\end{description}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]{BiB\TeX: Exemplo}
+
+\verb|@Book{livropca,| \newline
+\verb|author = {Ian T. Jolliffe},| \newline
+\verb|publisher = {Springer-Verlag},| \newline
+\verb|title = {Principal Component Analysis},| \newline
+\verb|year = {2002},| \newline
+\verb|note = {ISBN 0387954422}| \newline
+\verb|}| \newline
+
+\cite{latex_wikibooks}
+
+\end{frame} 

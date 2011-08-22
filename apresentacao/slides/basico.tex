@@ -1,0 +1,70 @@
+\section{Conceitos B\'asicos}
+\subsection{Estrutura B\'asica}
+
+\begin{frame}{Arquivo fonte}
+
+\begin{itemize}
+\item Um arquivo fonte cont\'em o texto a ser processado e comandos que indicam como o texto deve ser processado;
+\item Palavras s\~ao separadas por um ou mais espa{\c c}os;
+\item Par\'agrafos s\~ao separados por uma ou mais linhas;
+\item O resultado final n\~ao \'e alterado pela quantidade de espa{\c c}os/linhas;
+\item A maioria dos comandos come{\c c}am com o caracter \;
+\item O texto n\~ao deve conter caracteres especiais diretamente.
+
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Estrutura b\'asica de um documento}
+\begin{block}{Modelo b\'asico}
+\verb| \documentclass[opções]{class/estilo} |\\
+\verb| %preambulo - inclusão de pacotes, etc|\\
+\verb| \usepackage[opções]{pacote}|\\
+\verb| \begin{document}|\\
+\verb| %conteúdo do documento|\\
+\verb| \end{document}|
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Elementos b\'asicos de um documento}
+
+Abaixo est\~ao descritos algumas classes de documentos que podem ser utilizadas com \LaTeX:
+\begin{description}
+\item[article] Para artigos em revistas cient\'ificas, apresenta{\c c}\~oes, pequenos relat\'orios, convites, etc;
+\item[proc] Uma classe para \textit{proceedings} baseada na classe de artigos;
+\item[minimal] Essa classe gera um documento m\'inimo (apenas define um tamanho de p\'agina e uma fonte base);
+\item[report] Para longos relat\'orios contendo muitos cap\'itulos, pequenos livros, teses, etc;
+\item[book] Para cria{\c c}\~ao de livros;
+\item[slides] Classe para cria{\c c}\~ao de \textit{slides};
+\item[memoir] \'E baseado na classe para cria{\c c}\~ao de livros, com altera{\c c}\~oes na produ{\c c}\~ao do documento;
+\item[letter] Para gera{\c c}\~ao de cartas. 
+\end{description}
+\end{frame}
+
+\begin{frame}[fragile]{Elementos b\'asicos de um documento}
+
+Abaixo est\~ao listadas as op{\c c}\~oes mais comuns para os documentos de classes padr\~oes \LaTeX:
+\begin{description}
+\item[10pt, 11pt, 12pt] Define o tamanho da fonte principal do documento;
+\item[a4paper, letterpaper,...] Define o tamanho do papel. O tamanho padr\~ao \'e \texttt{letterpaper};
+\item[fleqn] Apresenta as f\'ormulas alinhadas \`a esquerda ao inv\'es de centradas;
+\item[titlepage, notitlepage] Especifica se uma nova p\'agina deve ser iniciada ap\'os o t\'itulo do documento ou n\~ao;
+\item[onecolumn,twocolumn] Define se o texto estar\'a em uma ou duas colunas;
+\item[landscape] Altera o leioute do documento para impress\~ao em modo paisagem;
+\end{description}
+\end{frame}
+
+
+\begin{frame}[fragile]{Comandos}
+\begin{itemize}
+\item Um comando em \LaTeX  \'e normalmente precedido de \backslash e seguido de par\^ametros opcionais (delimitados por $[$ e $]$) e/ou par\^ametros obrigat\'orios (delimitados por ${$ e $}$);
+\item Uma exce{\c c}\~ao a esta regra \'e o cifr\~ao ("\$"), que delimita o ambiente matemático;
+\begin{itemize}
+\item Exemplo: \verb|$ax^2+bx+c=0$| produz $ax^2+bx+c=0$.
+\end{itemize} 
+\end{itemize}
+
+\end{frame}

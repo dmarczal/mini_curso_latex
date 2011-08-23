@@ -1,0 +1,139 @@
+\section{Tabelas}
+\subsection{Construindo tabelas}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Tabelas}
+   Tabelas são facilmente criadas com o comando \textit{tabular}
+
+   \begin{itemize}
+      \item Tabelas começam com o comando $\backslash$begin\{tabular\}\{ccc\}.
+      \item \textbf{\{ccc\}} específica o número de colunas.
+      \item Colunas são alinhas à direita \textbf{r}, à esquerda \textbf{l} e centralizado \textbf{c}
+      \item Pode se ter vários alinhamentos na mesma tabela.
+      \item O simbolo \& divide cada coluna.
+      \item A \verb|\\| divide as linhas.
+   \end{itemize}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Exemplo 1:}
+
+  \begin{columns}
+    \begin{column}[c]{5cm}
+      \begin{minted}[fontsize=\scriptsize]{tex}
+       \begin{tabular}{ccc}
+         cell 1 & cell 2 & cell 3 \\
+         cell 4 & cell 5 & cell 6 \\
+       \end{tabular}
+     \end{minted}
+
+    \end{column}
+      \begin{tabular}{ccc}
+        cell 1 & cell 2 & cell 3 \\
+        cell 4 & cell 5 & cell 6 \\
+      \end{tabular}
+    \begin{column}[c]{2cm}
+
+    \end{column}
+  \end{columns}
+
+  \vspace{10pt}
+  \line(1,0){300}
+
+  \begin{columns}[Código]
+    \begin{column}[c]{5cm}
+      \begin{minted}[fontsize=\scriptsize]{tex}
+       \begin{tabular}{ccc}
+         \hline
+         cell 1 & cell 2 & cell 3 \\
+         \hline
+         cell 4 & cell 5 & cell 6 \\
+         \hline
+       \end{tabular}
+     \end{minted}
+
+    \end{column}
+      \begin{tabular}{ccc}
+        \hline
+        cell 1 & cell 2 & cell 3 \\
+        \hline
+        cell 4 & cell 5 & cell 6 \\
+        \hline
+      \end{tabular}
+    \begin{column}[c]{2cm}
+
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Exemplo 2: Linhas Horizontais}
+  Código:
+  \begin{center}
+
+     \begin{minted}[fontsize=\scriptsize]{tex}
+       \begin{tabular}{|c|c|c|}
+         cell 1 & cell 2 & cell 3 \\
+         cell 4 & cell 5 & cell 6 \\
+       \end{tabular}
+     \end{minted}
+
+  \end{center}
+
+  Resultado:
+  \begin{center}
+     \begin{tabular}{|c|c|c|}
+       cell 1 & cell 2 & cell 3 \\
+       cell 4 & cell 5 & cell 6 \\
+     \end{tabular}
+  \end{center}
+
+  A Tabela \ref{completa} possui linhas e colunas.
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Exemplo 3: Completa}
+
+  \begin{minted}[fontsize=\tiny]{tex}
+    \begin{table}
+     \begin{tabular}{|c|c|c|}
+       \hline
+       \multicolumn{3}{|c|}{Tabela de Exemplo} \\
+       \hline
+       cell 1 & cell 2 & cell 3 \\
+       \hline
+       cell 4 & cell 5 & cell 6 \\
+       \hline
+     \end{tabular}
+     \label{completa}
+     \caption{Tabela com linhas e colunas}
+    \end{table}
+  \end{minted}
+  \vspace{1cm}
+  \begin{flushright}
+    \begin{table}
+     \begin{tabular}{|c|c|c|}
+       \hline
+       \multicolumn{3}{|c|}{Tabela de Exemplo} \\
+       \hline
+       cell 1 & cell 2 & cell 3 \\
+       \hline
+       cell 4 & cell 5 & cell 6 \\
+       \hline
+     \end{tabular}
+     \label{completa}
+     \caption{Tabela com linhas e colunas}
+    \end{table}
+  \end{flushright}
+
+\end{frame}

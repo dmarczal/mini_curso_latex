@@ -1,0 +1,89 @@
+\section{Frames}
+\subsection{Definindo slides}
+
+\begin{frame}
+  \frametitle{Frames}
+
+  \visible<1-2>{Um projeto Beamer é constituído de vários \textbf{frames}. Cada \textbf{frame} produz um ou mais
+  slides dependendo do uso dos \textit{overlays}.}
+
+  \vspace{1cm}
+
+  \begin{block}<2->{Examplo de um frame básico}
+    \inputminted[fontsize=\scriptsize]{tex}{codes/01-frame.tex}
+  \end{block}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+
+  \begin{block}<1->{Alinhamento}
+    A opção de alinhamento \textit{default} é centralizada \textbf{[c]}.
+    Mas existe as opções \textbf{[t]} para o alinhamento no topo (\textit{top align}), e \textbf{[b]} para
+    o alinhamento no rodapé (\textit{bottom align}).
+  \end{block}
+
+  \vspace{1cm}
+
+  \begin{block}<2>{Alinhamento}
+    \inputminted[fontsize=\scriptsize]{tex}{codes/02-frame.tex}
+  \end{block}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}[plain]
+  \begin{itemize}[<+->]
+     \item A opção \textbf{plain} \textcolor{red}{$\backslash$begin\{frame\}[plain]}
+           retira do slide os cabeçalhos, rodapés, e diminui a barra de navegação.
+     \item Este recurso é importante para apresentar figuras.
+  \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Frames especiais}
+
+  \begin{itemize}
+     \item \mint{tex}|\titlepage|
+     \item \mint{tex}|\tableofcontents[\pausesections] |
+  \end{itemize}
+
+   \begin{minted}[fontsize=\scriptsize,resetmargins=true]{tex}
+     ..
+     \begin{frame}
+       \titlepage
+     \end{frame}
+     ...
+     \begin{frame}
+       \frametitle{Sumario}
+       \tableofcontents
+     \end{frame}
+     ...
+  \end{minted}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Título do Frame}
+
+   \begin{minted}[fontsize=\scriptsize,resetmargins=true]{tex}
+     \begin{frame}
+       \frametitle{Aqui vai o titulo do frame}
+     \end{frame}
+   \end{minted}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Tudo junto - Slides Iniciais}
+  \inputminted[linenos,fontsize=\scriptsize]{tex}{codes/04-template-inicial.tex}
+\end{frame}
+

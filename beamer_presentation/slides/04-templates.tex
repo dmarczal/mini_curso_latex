@@ -1,0 +1,38 @@
+\section{Templates}
+\subsection{Como e por que Templates}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+     \item  O jeito mais rápido de começar com o Beamer é através do uso de templates.
+     \item  Você pode gerar sua template através de scripts.
+     \item  Vamos utilizar um \href{http:\\www.inf.ufpr.br/diego/minicurso\_latex}{\textcolor{blue}{script}}.
+     \item  Crie uma basta \textbf{scripts} no seu home.
+     \item  Descompacte os arquivos na pasta criada.
+     \item  Execute o seguinte comando \textbf{./install}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Teste o template}
+  \begin{itemize}[<+->]
+     \item Para criar uma apresentação execute o comando \textbf{latex\_new} nome da apresentação.
+     \item Não use acentos nem espaços para a nome da apresentação.
+     \item Para compilar entre no diretório do projeto e execute o comando \textbf{make}.
+     \item Conhecendo a estrutura de diretórios e o arquivo \textbf{Makefile}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Definindo informações}
+
+    \only<1-5>{As primeiras alterações são para as informações chaves da sua apresentação}.
+
+    \begin{block}{Alterações necessárias}<2->
+      \begin{itemize}
+         \item <2-> \mint{tex} |\title[Titulo menor]{Titulo maior}|
+         \item <3-> \mint{tex} |\subtitle[Titulo menor]{Subtitulo maior}|
+         \item <4-> \mint{tex} |\author[sobrenome]{nome}|
+         \item <5-> \mint{tex} |\date[18/08/2011]{18 de agosto de 2011}|
+     \end{itemize}
+    \end{block}
+\end{frame}

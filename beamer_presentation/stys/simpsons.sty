@@ -1,0 +1,97 @@
+% simpsons.sty -- macros for using the Simpsons font. 
+% 
+% by Raymond Chen (rjc@math.princeton.edu) 
+% 
+\ProvidesPackage{simpsons}
+\let\ifGoofy=\iffalse 
+    \def\Goofy{\let\ifGoofy\iftrue} \def\unGoofy{\let\ifGoofy\iffalse} 
+\let\ifLeft=\iffalse 
+    \def\Left {\let\ifLeft \iftrue} \def\unLeft {\let\ifLeft \iffalse} 
+ 
+\font\simpsons=simpsons scaled 1500
+
+% \Simps@nEyeball 
+% 
+% On entry: 
+%       \count@ points to the first fontdimen for the current character 
+%       \box0   contains the character being typeset (used only if Left) 
+% 
+% Uses: \dimen@ for scratch computations 
+% 
+% Pseudocode: 
+% 
+%   If left:    \dimen@ = \wd0 - first fontdimen 
+%   If right:   \dimen@ = first fontdimen 
+% 
+%   Advance \count@ to the second fontdimen (must do now, outside a group) 
+% 
+%   Build a zero-width box containing { 
+%       If left:  \dimen@ = \dimen@ - #1ex 
+%       If right: \dimen@ = \dimen@ + #1ex 
+%       Move right \dimen@ 
+% 
+%       \dimen@ = second fontdimen + #2ex 
+%       Move up \dimen@ 
+%       Place the eyeball 
+%   } 
+%   Advance \count@ to the next fontdimen (ready for next iteration) 
+% 
+% But note that the ``If left: ... If right: ...'' stuff is done 
+% extraordinarily dastardlyly. 
+ 
+\def\Simps@nEyeball(#1,#2){% 
+    \dimen@ \ifLeft \wd\z@ \advance\dimen@-\fi \fontdimen\count@\simpsons 
+    \advance\count@\@ne 
+    \hbox to\z@{\advance\dimen@\ifLeft-\fi#1ex 
+          \kern\dimen@ 
+          \dimen@\fontdimen\count@\simpsons 
+          \advance\dimen@#2ex 
+          \raise\dimen@\hbox{\char0}\hss}% 
+    \advance\count@\@ne} 
+ 
+% \doSimpson 
+% 
+% Uses:  All register usage is localized to a group. 
+% 
+% Pseudocode: 
+% 
+% \leavevmode, in case we were in vertical mode 
+% Begin a group 
+%   Switch to simpsons font. 
+%   Set \count@ = 2 * #1 
+%   Set \box0 to \char\count@ (or \char(\count@+1) if left) 
+%   Set \count@ = 4 + 4 * #1 
+%   \Simps@nEyeball the right eyeball 
+%   \Simps@nEyeball the left eyeball 
+%   Emit \box0 
+% End the group 
+% Reset \Goofy and \Left 
+ 
+\def\doSimpson#1(#2,#3)(#4,#5){\leavevmode 
+    {\simpsons 
+    \count@=#1% 
+    \advance\count@\count@ 
+    \setbox\z@=\hbox{\ifLeft\advance\count@\@ne\fi 
+                     \char\count@}% 
+    \advance\count@\tw@ 
+    \multiply\count@\tw@ 
+    \Simps@nEyeball(#2,#3)% 
+    \Simps@nEyeball(#4,#5)% 
+    \box\z@}\unGoofy\unLeft} 
+ 
+\def\Simpson{\ifGoofy\let\next\doSimpson\else\let\next\normalSimpson\fi\next} 
+\def\normalSimpson#1{\doSimpson#1(0,0)(0,0)} 
+ 
+\chardef\f@ur=4 
+\chardef\f@ve=5 
+\chardef\s@x=6 
+ 
+\def\Lisa{\Simpson\@ne} 
+\def\Homer{\Simpson\tw@} 
+\def\Bart{\Simpson\thr@@} 
+\def\Marge{\Simpson\f@ur} 
+\def\Maggie{\Simpson\f@ve} 
+\def\Burns{\Simpson\s@x} 
+\def\SNPP{{\simpsons\@ne}} 
+ 
+\endinput

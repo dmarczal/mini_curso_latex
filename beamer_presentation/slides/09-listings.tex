@@ -1,0 +1,99 @@
+%%!TEX encoding = UTF-8 Unicode
+\section{Listas}
+\subsection{Definindo Listas}
+%-----------------------------------------------------------------%
+
+\begin{frame}
+
+  Lista são frequentemente utilizados para organizar os assuntos apresentação em tópicos. \\
+
+  O Beamer inclui três formas de organizar sua apresentação em tópicos. \\
+
+  \begin{description}
+     \item[\textbf{Itemize}] Usado para apresentar uma lista de itens que não possuem uma ordem.
+     \item[\textbf{Enumerate}] Usado para mostrar uma lista com números (itens ordenados).
+     \item[\textbf{Description}] Usado para mostrar itens com explicações.
+  \end{description}
+
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Itemize}
+
+  \begin{columns}
+    \begin{column}[l]{5cm}
+     \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+      \begin{itemize}
+         \item Primeiro Item.
+         \item Segundo Item.
+         \item Terceiro Item.
+         \item Quarto Item.
+      \end{itemize}
+  \end{minted}
+
+    \end{column}
+
+    \begin{column}[r]{5cm}
+      \begin{itemize}
+         \item Primeiro Item.
+         \item Segundo Item.
+         \item Terceiro Item.
+         \item Quarto Item.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Enumerate}
+
+  \begin{columns}
+    \begin{column}[l]{5cm}
+     \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+      \begin{enumerate}
+         \item Primeiro Item.
+         \item Segundo Item.
+         \item Terceiro Item.
+         \item Quarto Item.
+      \end{enumerate}
+  \end{minted}
+
+    \end{column}
+
+    \begin{column}[r]{5cm}
+      \begin{enumerate}
+         \item Primeiro Item.
+         \item Segundo Item.
+         \item Terceiro Item.
+         \item Quarto Item.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Description}
+
+    \begin{block}{}
+      \inputminted[fontsize=\scriptsize]{tex}{codes/07-description.tex}
+    \end{block}
+
+    \begin{block}{}
+       \begin{description}[Primeiro Item]
+          \item [Primeiro Item] Descrição do primeiro item.
+          \item [Segundo Item] Descrição do segundo item.
+          \item [Terceiro Item] Descrição do terceiro item.
+          \item [Quarto Item]  Descrição do quarto item.
+       \end{description}
+   \end{block}
+
+\end{frame}
+
+
+%-----------------------------------------------------------------%

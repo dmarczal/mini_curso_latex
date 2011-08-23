@@ -1,0 +1,197 @@
+\section{Overlays}
+\subsection{Criando efeitos no texto}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Overlays}
+
+  \begin{itemize}[<+->]
+     \item São usado para partes da apresentação aparecerem incrementalmente.
+     \item No Beamer, os \textcolor{red}{overlays} controlam que partes do frame irá aparecer.
+  \end{itemize}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Overlays}
+
+  \begin{block}<1->{}
+    Uma das maneiras de fazer partes dos texto aparecerem separados é utilizando o comando
+    \mint{tex}| \pause |
+  \end{block}
+
+  \begin{block}<2->{Exemplo do pause:}
+    \inputminted[fontsize=\scriptsize]{tex}{codes/08-pause-command.tex}
+  \end{block}
+
+  \begin{block}{}
+     \pause
+     \textbf{Passo 1:} Aprender Latex. \\
+     \pause
+     \textbf{Passo 2:} Aprender Beamer. \\
+     \pause
+     \textbf{Passo 3:} Não se preocupar com formatação!! =) \\
+  \end{block}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Especificações para os overlays}
+
+  \begin{itemize}[<+->]
+     \item Em overlays avançadas, muitos comandos e bloco de instruções incorporam algumas
+           especificações.
+     \item Para entender overlays primeiro temos que entender como a apresentação é mostrada.
+     \item Para dar a ilusão do overlays usamos múltiplos slides com diferentes partes de texto.
+     \item Por exemplo: \textbf{$\backslash$pause} criou 3 slides para realizar o efeito no texto.
+  \end{itemize}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Especificações para Overlays}
+
+  \begin{itemize}
+     \item As especificações de overlay são especificadas entre \verb|(<,>)| e indica que parte do slide
+           deve aparecer.
+     \item A especificação \verb|<1->|, significa mostre do slide 1 em diante.
+     \item \verb|<1-3>|mostre do slide 1 até o 3.
+     \item \verb|<-3, 5-6, 8->|, mostre todos os slides exceto o 4 e o 5.
+  \end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Especificações Overlays}
+
+    \begin{columns}
+      \begin{column}[c]{5cm}
+        \begin{minted}[fontsize=\scriptsize]{tex}
+          \begin{itemize}
+            \item<1>   Texto ... <1>
+            \item<1-2> Texto ... <1-2>
+            \item<1-2> Texto ... <1-2>
+            \item<1>   Texto ... <1>
+            \item<1,3> Texto ... <1,3>
+            \item<1-2> Texto ... <1-2>
+           \end{itemize}
+       \end{minted}
+
+      \end{column}
+
+      \begin{column}[c]{5cm}
+         \begin{itemize}
+          \item<1>   Texto ... <1>
+          \item<1-2> Texto ... <1-2>
+          \item<1-2> Texto ... <1-2>
+          \item<1>   Texto ... <1>
+          \item<1,3> Texto ... <1,3>
+          \item<1-2> Texto ... <1-2>
+        \end{itemize}
+      \end{column}
+    \end{columns}
+
+  \begin{block}<4->{Nota:}{\small
+    Se você quiser que os itens apareçam na ordem que de listagem use a opção
+    [<+->]. ( i.e. $\backslash$begin\{itemize\}[<+->]| )}
+  \end{block}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Especificações Overlays}
+  As especificações Overlays também podem ser usadas para que certos comandos
+  tenham efeito em diferentes times.
+
+  \begin{minted}[fontsize=\scriptsize]{tex}
+    \alert{Alerta para todos os slides}     \\
+    \textcolor<2>{blue}{Azul no slide 2}    \\
+    \textit<3>{Italico no slide 3}          \\
+    \alert<1,3>{Alerta nos slides 1 e 3}    \\
+  \end{minted}
+
+  \begin{block}{Comandos}
+    \inputminted[fontsize=\scriptsize]{tex}{codes/09-overlays.tex}
+  \end{block}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Especificações Overlays}
+
+    \alert{Alerta para todos os slides}     \\
+    \textcolor<2>{blue}{Azul no slide 2}    \\
+    \textit<3>{Itálico no slide 3}          \\
+    \alert<1,3>{Alerta nos slides 1 e 3}    \\
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile,plain]
+  \frametitle{Especificações Overlays}
+   Comandos especiais:
+
+  \begin{tabular}{|p{4cm}|p{6cm}|}
+    \hline
+    \mint{tex}|\onslide<1,2>| & $\backslash$only<1-2>\{O texto dado como argumento apenas aparece nos slides especificados.
+                                Se nenhum texto for passado qualquer texto após o comando aparecerá apenas
+                                nos slides específicados\} \\
+    \hline
+    \mint{tex}|\visible| & $\backslash$visible<3>\{Este texto será visível somente no slide 3.\} \\
+    \hline
+    \mint{tex}|\invisible| & $\backslash$invisible<-2>\{Este texto fica invisível até o slide 2 e visível no restante.\}\\
+    \hline
+    \mint{tex}|\alt| & $\backslash$alt<2>\{Texto para o slide 2.\}\{Texto para o restante.\}\\
+    \hline
+  \end{tabular}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Transparete Invisível}
+
+  Os comandos abaixo habilitam a transparência e retorna ao comportamento normal de
+  e esconder os itens nos frames.
+
+  \begin{minted}[fontsize=\scriptsize]{language}
+    ...
+    \setbeamercovered{transparent}
+    ...
+    \setbeamercovered{invisible}
+    ...
+  \end{minted}
+
+\end{frame}
+
+%-----------------------------------------------------------------------%
+\begin{frame}{Overlays com blocos}
+
+  \setbeamercovered{invisible}
+
+  \begin{block}<1->{Primeiro bloco}
+    Este é o primeiro bloco
+  \end{block}
+  \vspace{1cm}
+  \begin{block}<2->{Segundo bloco}
+    Este é o segundo bloco \only<1>{transparente}
+  \end{block}
+
+  \setbeamercovered{transparent}
+\end{frame}
+
+%-----------------------------------------------------------------------%

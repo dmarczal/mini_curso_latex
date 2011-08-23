@@ -1,0 +1,266 @@
+\section{Texto}
+\subsection{Formatando Textos no Beamer}
+%--------------------------------------------------------------------------%
+
+\begin{frame}
+  \frametitle{Comandos comuns para texto no Beamer}
+
+  \begin{block}{}
+      \begin{columns}
+        \begin{column}[l]{5cm}
+          \inputminted[fontsize=\small]{tex}{codes/06-text_commands.tex}
+        \end{column}
+
+        \begin{column}[c]{0cm}
+          \line(0,0){100}
+        \end{column}
+
+        \begin{column}[r]{4cm}
+          {\small
+          \emph{Texto enfatizado}   \\
+          \textbf{Texto em negrito} \\
+          \textit{Texto em itálico} \\
+          \textsl{Texto inclinado} \\
+          \alert{Texto de alerta}  \\
+          \textrm{Texto em romano} \\
+          \textsf{Texto em sans serif} \\
+          \textcolor{green}{Texto em verde} \\
+          \texttt{Máquina de escrever} \\
+          }
+        \end{column}
+      \end{columns}
+  \end{block}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Tamanho de Fontes}
+
+  \begin{tabular}{|l|c|}
+    \hline
+      Comando & Resultado\\
+    \hline
+      \verb| \tiny{minúsculo} | & \tiny{minúsculo} \\
+    \hline
+      \verb| \scriptsize{muito pequena} | & \scriptsize{muito pequena} \\
+    \hline
+      \verb| \footnotesize{nota de rodapé} | & \footnotesize{nota de rodapé} \\
+    \hline
+      \verb| \small{pequena} | & \small{pequena} \\
+    \hline
+      \verb| \normalsize{normal} | & \normalsize{normal} \\
+    \hline
+      \verb| \large{grande} | & \large{grande}  \\
+    \hline
+      \verb| \LARGE{Muito Maior} | & \LARGE{Muito Maior} \\
+    \hline
+      \verb| \huge{Bem Grande} | & \huge{Bem Grande} \\
+    \hline
+      \verb| \Huge{Enorme} | & \Huge{Enorme}  \\
+    \hline
+  \end{tabular}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Tamanho de Fontes}
+
+  \rowcolors{1}{lightblue}{white}
+  \begin{table}
+    \begin{tabular}{|l|c|c|}
+      \hline
+        Comando & Tamanho - (padrão 12pt)\\
+      \hline
+        \verb| \tiny{minúsculo} | & 6pt\\
+      \hline
+        \verb| \scriptsize{muito pequena} | & 8pt\\
+      \hline
+        \verb| \footnotesize{nota de rodapé}| & 10pt\\
+      \hline
+        \verb| \small{pequena} | & 11pt\\
+      \hline
+        \verb| \normalsize{normal} | & 12pt \\
+      \hline
+        \verb| \large{grande} | & 17pt\\
+      \hline
+        \verb| \LARGE{Muito Maior} | & 20pt\\
+      \hline
+        \verb| \huge{Bem Grande} | & 25pt\\
+      \hline
+        \verb| \Huge{Enorme} | &  25pt\\
+      \hline
+    \end{tabular}
+    \caption{Tamanho das fontes}
+    \label{Tamanho das fontes}
+  \end{table}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Texto Verbatim}
+
+  \begin{itemize}[<+->]
+     \item Em alguns momentos necessitamos digitar algum texto do jeito que escrevemos.
+     \item Mas como fazer isto no \LaTeX?
+     \item No \LaTeX uma das maneiras é utilizar o comando \textbf{verbatim}.
+  \end{itemize}
+
+  \vspace{1cm}
+  \visible<4>{Existe duas maneiras de usar o \textbf{verbatim}:}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Usando texto verbatim}
+
+  \begin{itemize}[<+->]
+     \item Para textos de uma linha usa-se: \\
+        \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+            \verb|Qualquer texto...|
+        \end{minted}
+     \item Para grande quantidades de textos:
+        \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+          \begin{verbatim}
+             Texto ...
+             Texto ...
+             .....
+          \end{verbatim}
+        \end{minted}
+  \end{itemize}
+
+  \begin{block}<3->{Nota:}
+    Para o \textbf{verbatim} funcionar é necessário adicionar a opção [fragile] no frame.
+    Exemplo: \mint{tex}| \begin{frame}[fragile] ...|
+  \end{block}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{SemiVerbatim}
+
+  \begin{block}<1->{Exemplo de código:}
+     \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+        \begin{semiverbatim}
+           Para o texto em vermelho use o comando
+           \textcolor{red}{ \\textcolor\{red\}\{Vermelho\} }
+        \end{semiverbatim}
+     \end{minted}
+  \end{block}
+
+  \begin{block}<2->{Resultado:}
+    \begin{semiverbatim}
+      Para o texto em vermelho use o comando
+      \textcolor{red}{ \\textcolor\{red\}\{Vermelho\}}
+    \end{semiverbatim}
+  \end{block}
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Temas de Fonte}
+  \begin{itemize}
+     \item<1-> Para mudar o tipo de fonte da apresentação usamos o comando:
+        \mint{tex}| \usefonttheme{serif}|
+  \end{itemize}
+
+  \begin{block}<2->{Você pode escolher as seguintes opções de temas:}
+    \begin{center}
+       \begin{tabular}{ll}
+        serif & structureitalicserif \\
+        structurebold & structuresmallcapsserif
+      \end{tabular}
+     \end{center}
+  \end{block}
+
+  \begin{block}<3->{Nota:}
+    Para mais informações sobre fontes \textbf{leia o Beamer User Guide}
+  \end{block}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+\begin{frame}[fragile]
+  \frametitle{Tamanho de Fonte}
+  \begin{itemize}
+     \item Para escolher o tamanho da fonte é necessário adicionar parâmetros no inicio do documento Beamer.
+        \mint{tex}|\documentclass{beamer}|
+     \item Exemplo:
+        \mint{tex}|\documentclass[10pt]{beamer}|
+     \item As opções de tamanho são:
+          \begin{itemize}
+             \item 10pt
+             \item 11pt (Tamanho padrão)
+             \item 12pt
+          \end{itemize}
+     \item Outras tamanhos requerer o uso de pacotes adicionais!
+  \end{itemize}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+
+  \frametitle{Definindo novo tamanho de fonte}
+
+  Para definir um tamanho de fonte precisa-se criar um comando!
+
+  \begin{block}<1->{}
+     \begin{minted}[fontsize=\scriptsize, resetmargins=true]{tex}
+       \makeatletter
+         \newcommand\tinyv{\@setfontsize\tinyv{6pt}{6pt}}
+       \makeatother
+     \end{minted}
+  \end{block}
+
+  \begin{block}<2->{Exemplo:}
+    \begin{columns}
+      \begin{column}[l]{5cm}
+         \mint{tex}| \tinyv{Fonte ainda menor} |
+      \end{column}
+
+      \begin{column}[r]{0cm}
+         $\rightarrow$
+      \end{column}
+
+      \begin{column}[r]{4cm}
+        \tinyv{Fonte ainda menor}
+      \end{column}
+    \end{columns}
+  \end{block}
+
+\end{frame}
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}[fragile]
+  \frametitle{Estilos de Fonte}
+
+  Diferentes estilos de fontes podem ser escolhidos para personalizar sua apresentação. \\
+
+  Cada estilo de fonte está separada em um pacote diferente.
+  \mint{tex}|\usepackage{helvet}|
+
+  Para usar um estilo def fonte use o comando:
+  \mint{tex}|\fontfamily{euler}|
+
+  \begin{block}{Fontes disponíveis no Beamer}
+    \begin{tabular}{l l l l l}
+      serif & euler & newcent & avant & helvet \\
+      palatino & bookman & mathtime & pifont & chancery \\
+      mathptm & utopia & charter & mathptmx \\
+    \end{tabular}
+  \end{block}
+
+\end{frame}

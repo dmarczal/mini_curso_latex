@@ -1,0 +1,62 @@
+\section{Transições}
+\subsection{Efeitos nos slides}
+%------------------------------------------------------------
+
+\begin{frame}[fragile]
+  \frametitle{Transições de Slides}
+
+  \begin{itemize}
+     \item Com o Beamer também é possível definir efeitos transições de slides.
+     \item Porém, diferentes visualizadores de pdf podem interpretar de diferentes maneiras os efeitos.
+  \end{itemize}
+
+  \begin{block}{Exemplo:}
+    \begin{minted}[fontsize=\scriptsize]{tex}
+        \begin{frame}
+          \frametitle{Examplo Boxin }
+          \transboxin
+          Corpo do frame
+        \end{frame}
+    \end{minted}
+  \end{block}
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}[fragile]
+  \transboxin
+
+  \begin{block}{Exemplo 2:}
+    \begin{minted}[fontsize=\scriptsize]{tex}
+        \begin{frame}
+          \frametitle{Examplo blinds Horizontal }
+          \transblindshorizontal[duration=2, direction=25]
+          Corpo do frame
+        \end{frame}
+    \end{minted}
+  \end{block}
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}[fragile]
+  \transblindshorizontal[duration=2, direction=25]
+
+  \begin{block}{Alguns opções de transições}
+      \centering
+      \begin{tabular}{l}
+        $\backslash$transblindshorizontal \\
+        $\backslash$transblindsvertical   \\
+        $\backslash$transboxin \\
+        $\backslash$transboxout \\
+        $\backslash$transdissolve \\
+        $\backslash$transglitter \\
+        $\backslash$transslipverticalin \\
+        $\backslash$transslipverticalout \\
+        $\backslash$transhorizontalin \\
+        $\backslash$transhorizontalout \\
+        $\backslash$transwipe \\
+        $\backslash$transduration\{2\} \\
+      \end{tabular}
+  \end{block}
+\end{frame}
